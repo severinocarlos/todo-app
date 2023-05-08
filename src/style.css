@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Bebas Neue', cursive;
+}
+
+body {
+    background: rgb(0,0,0);
+}
+
+header {
+    border-top: 0.1rem solid gray;
+    border-bottom: 0.1rem solid gray;
+}
+
+header h2{
+    color: white;
+    text-align: center;
+    margin-top: 0.1rem;
+    font-size: 2rem;
+    padding: 0.5rem;
+}
+
+.add-tasks--container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 4rem;
+    background-color: white;
+    width: 25rem;
+    height: 4rem;
+    border-radius: 1rem;
+    margin-left: 1.5rem;
+}
+
+#input-task {
+    background-color: transparent;
+    border-width: 0 0 0.1rem 0;
+    outline: none;
+    padding: 0.3rem;
+    color: black;
+    font-size: 1rem;
+}
+
+
+#btn-add-task {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 0.5rem;
+    border: black
+    border: 0;
+    color: white;
+    font-size: 1rem;
+    
+    cursor: pointer;
+}
+
+#btn-add-task img {
+    width: 1rem;
+    height: 1rem;
+}
+
+#selec-item {
+    font-size: 1rem;
+}
+
+.tasks-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    margin-top: 2rem;
+}
+
+.in-progress-container  {
+    width: 35rem;
+}
+
+.done-container  {
+    width: 35rem;
+}
+.title-in-progress-tasks {
+    display: flex;
+    justify-content: center;
+}
+
+.title-done-tasks {
+    display: flex;
+    justify-content: center;
+}
+
+.title-in-progress-tasks  span {
+    background-color: #63B4FF;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    font-size: 1.2rem;    
+}
+
+.title-done-tasks span {
+    background-color: #B1D199;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+}
+
+ul > li {
+    margin-top: 2rem;
+    list-style-type: none;
+    background: red;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+}
+

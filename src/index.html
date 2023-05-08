@@ -8,6 +8,46 @@
     <title>To-do App</title>
 </head>
 <body>
-    
+    <header>
+        <h2>To-do App</h1>
+    </header> <!--Navbar-->
+
+    <main>
+        <div class="container">
+            <div class="add-tasks--container">
+                <input id="input-task" type="text" placeholder="Digite uma atividade">
+                <label for="selec-item">Priority: </label>
+                <select name="select-classification" id="selec-item">
+                    <option value="Normal">Low</option>
+                    <option value="intermediary ">Medium</option>
+                    <option value="urgent">High</option>
+                </select>
+                <button id="btn-add-task"><img src="assets/img/plus.png" alt="Imagem de adição de tarefa"></button>
+            </div><!--add-tasks-->
+            
+            <div class="tasks-container">
+
+                <div class="in-progress-container">
+                    <div class="title-in-progress-tasks">
+                        <span>In progress</span>
+                    </div>
+                    
+                    <ul class="list-in-progress-tasks>">
+                        
+                    </ul>
+                </div>
+
+                <div class="done-container">
+                    <div class="title-done-tasks">
+                        <span>Done</span>
+                    </div>
+                    
+                    <ul id="list-done-tasks">
+                       
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
