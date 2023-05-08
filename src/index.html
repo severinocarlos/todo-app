@@ -16,11 +16,11 @@
         <div class="container">
             <div class="add-tasks--container">
                 <input id="input-task" type="text" placeholder="Digite uma atividade">
-                <label for="selec-item">Priority: </label>
-                <select name="select-classification" id="selec-item">
+                <label for="select-item">Priority: </label>
+                <select name="select-classification" id="select-item">
                     <option value="Low">Low</option>
                     <option value="Medium">Medium</option>
-                    <option value="High">High</option>
+                    <option value="urgent">High</option>
                 </select>
                 <button id="btn-add-task"><img src="assets/img/plus.png" alt="Imagem de adição de tarefa"></button>
             </div><!--add-tasks-->
@@ -31,9 +31,7 @@
                     <div class="title-in-progress-tasks">
                         <span>In progress</span>
                     </div>
-                    
-                    <ul class="list-in-progress-tasks">
-                        
+                    <ul class="in-progress-tasks-list">
                     </ul>
                 </div>
 
@@ -42,8 +40,7 @@
                         <span>Done</span>
                     </div>
                     
-                    <ul id="list-done-tasks">
-                       
+                    <ul id="-done-task-list">
                     </ul>
                 </div>
             </div>

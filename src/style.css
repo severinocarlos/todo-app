@@ -35,7 +35,7 @@ header h2{
     width: 25rem;
     height: 4rem;
     border-radius: 1rem;
-    margin-left: 1.5rem;
+    margin-left: 4rem;
 }
 
 #input-task {
@@ -82,13 +82,16 @@ header h2{
     margin-top: 2rem;
 }
 
-.in-progress-container  {
+.in-progress-container, .done-container  {
+    border: 0.1rem solid white;
+    box-shadow: 10px 10px 5px rgba(255,255,255, 0.1);
+    border-radius: 0.9rem;
     width: 35rem;
+    margin-top: 2rem;
+    height: 20rem;
+    overflow-y: auto;
 }
 
-.done-container  {
-    width: 35rem;
-}
 .title-in-progress-tasks {
     display: flex;
     justify-content: center;
@@ -100,13 +103,15 @@ header h2{
 }
 
 .title-in-progress-tasks  span {
+    margin: 1.2rem 0;
     background-color: #63B4FF;
     border-radius: 1rem;
     padding: 0.5rem;
-    font-size: 1.2rem;    
+    font-size: 1.2rem;
 }
 
 .title-done-tasks span {
+    margin: 1.2rem 0;
     background-color: #B1D199;
     border-radius: 1rem;
     padding: 0.5rem;
@@ -114,11 +119,10 @@ header h2{
 }
 
 ul > li {
-    margin-top: 2rem;
     list-style-type: none;
     background: red;
     padding: 1rem;
-    margin-bottom: 1rem;
     border-radius: 1rem;
+    margin: 0 1rem 1rem 1rem;
 }
 
