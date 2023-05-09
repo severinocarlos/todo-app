@@ -47,7 +47,6 @@ header h2{
     font-size: 1rem;
 }
 
-
 #btn-add-task {
     display: flex;
     align-items: center;
@@ -83,8 +82,8 @@ header h2{
 }
 
 .in-progress-container, .done-container  {
-    border: 0.1rem solid white;
-    box-shadow: 10px 10px 5px rgba(255,255,255, 0.1);
+    /* border: 0.1rem solid white; */
+    /* box-shadow: 10px 10px 5px rgba(255,255,255, 0.1); */
     border-radius: 0.9rem;
     width: 35rem;
     margin-top: 2rem;
@@ -124,5 +123,25 @@ ul > li {
     padding: 1rem;
     border-radius: 1rem;
     margin: 0 1rem 1rem 1rem;
+    word-wrap: break-word;
 }
 
+::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 1rem;
+    margin-right: 1rem;
+}
+  
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    border-radius: 0.5rem;
+}
+  
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 5px;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}

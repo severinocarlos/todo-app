@@ -3,22 +3,40 @@ const colors =  {
     'Medium': '#FEB139',
     'High': '#C21010'
 }
+const key = 'tasks'
 const add_btn = document.querySelector('#btn-add-task');
 
-const addCard = (_list, _tasks, _priority) =>  {
-    const item = document.createElement('li')
-    const text = document.createTextNode(_tasks.value)
-    item.appendChild(text)
-    item.style.background = colors[_priority.value]
-    _list.appendChild(item);
+const getItems = () => {
+    return JSON.parse(localStorage.getItem(key) || '[]');
+}
+
+const showCards = () =>  {
+    const list = document.querySelector('.in-progress-tasks-list')
+    let tasks = getItems()
+    list.innerHTML = ''
+    
+    tasks.forEach(task => {
+        console.log(colors[task.priority])
+        list.innerHTML += `<li style="background:${colors[task.priority]};">${task.task}</li>`
+    });
 }
 
 add_btn.addEventListener('click', () => {
-    const list = document.querySelector('.in-progress-tasks-list')
     const task = document.querySelector('#input-task')
     const priority = document.querySelector('#select-item')
 
-    addCard(list, task, priority)
-    
+    if (!task.value) {
+        alert('Please, write some task')
+    } else {
+        let tasks = getItems()
+        tasks.push({
+            task: task.value,
+            priority: priority.value
+        })
+        localStorage.setItem(key, JSON.stringify(tasks));
+        showCards()
+    }
     task.value = ''
 })
+
+showCards()
