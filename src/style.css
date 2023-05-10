@@ -32,6 +32,7 @@ header h2{
     gap: 1rem;
     margin-top: 4rem;
     background-color: white;
+
     width: 25rem;
     height: 4rem;
     border-radius: 1rem;
@@ -55,10 +56,10 @@ header h2{
     width: 2rem;
     height: 2rem;
     border-radius: 0.5rem;
-    border: black
     border: 0;
     color: white;
     font-size: 1rem;
+    box-shadow: 1.2px 1.2px RGBA(0,0,0,0.45);
     
     cursor: pointer;
 }
@@ -66,10 +67,15 @@ header h2{
 #btn-add-task img {
     width: 1rem;
     height: 1rem;
+    border: 0;
 }
 
-#selec-item {
+#select-item {
     font-size: 1rem;
+    border-radius: 0.5rem;
+    border: 0;
+    outline: none;
+    box-shadow: 1.2px 1.2px RGBA(0,0,0,0.45);
 }
 
 .tasks-container {
@@ -82,12 +88,10 @@ header h2{
 }
 
 .in-progress-container, .done-container  {
-    /* border: 0.1rem solid white; */
-    /* box-shadow: 10px 10px 5px rgba(255,255,255, 0.1); */
     border-radius: 0.9rem;
     width: 35rem;
     margin-top: 2rem;
-    height: 20rem;
+    height: 24rem;
     overflow-y: auto;
 }
 
@@ -103,18 +107,25 @@ header h2{
 
 .title-in-progress-tasks  span {
     margin: 1.2rem 0;
-    background-color: #63B4FF;
+    background: white;  
     border-radius: 1rem;
-    padding: 0.5rem;
+    padding: 0.5rem 1.2rem;
     font-size: 1.2rem;
+    color: black;
+    font-weight: 700;
+    letter-spacing: 0.05rem;
 }
 
 .title-done-tasks span {
     margin: 1.2rem 0;
-    background-color: #B1D199;
+    background: white;
+
     border-radius: 1rem;
-    padding: 0.5rem;
+    padding: 0.5rem 1.2rem;
+    color: black;
     font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.05rem;
 }
 
 ul > li {
@@ -125,7 +136,7 @@ ul > li {
     padding: 1rem;
     border-radius: 1rem;
     margin: 0 1rem 1rem 1rem;
-    word-wrap: break-word;
+    word-break: break-all;
 }
 
 ::-webkit-scrollbar {
@@ -146,4 +157,9 @@ ul > li {
   
 ::-webkit-scrollbar-thumb:hover {
     background-color: #555;
+}
+
+.btns {
+    margin-left: 2rem;
+    marigin-botton: 1rem;
 }
