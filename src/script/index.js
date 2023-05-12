@@ -1,10 +1,20 @@
 const colors =  {
-    'Low': '#003049',
-    'Medium': '#f77f00',
-    'High': '#d62828'
+    'Low': '#2ac197',
+    'Medium': '#d3ca78',
+    'High': '#d27772'
 }
+
+const colorsBackground = { 
+    'Low': 'rgba(42, 193, 151, 0.2)',
+    'Medium': 'rgba(211, 202, 12, 0.2)',
+    'High': 'rgba(101, 21, 17, 0.2)'
+}
+
+const toDoTasksKey = 'toDoTasksKey'
 const inProgressTasksKey = 'inProgressTasks'
 const doneTasksKey = 'DoneTasks'
+
+
 const addButton = document.querySelector('#btn-add-task');
 
 const getItems = () => {
@@ -28,21 +38,18 @@ const showCards = () =>  {
     const day = new Date();
 
     inProgressTasks.forEach(task => {
-        inProgressList.innerHTML += `<li style="background:${colors[task.priority]}; word-wrap: wrap;">task:<br>
-                                ${task.task_name}
-                                <div class='btns'>
-                                    <button id="btn-move-to-trash" onclick="removeCard('${task.task_name}')" style="background: transparent; border:0; cursor: pointer; outline: none; margin-bottom: 1rem; padding-right: 0.5rem;">
-                                        <img style="width:1rem; height: 1rem; margin-right: 1rem;"src="${'./assets/img/cross.png'}" alt="Move to trash"/>
-                                    </button>
-                                    <button id="btn-move-to-done" onclick="doneCard('${task.task_name}')" style="background: transparent; border:0; cursor: pointer; outline: none;">
-                                        <img style="width:1rem; height: 1rem;"src="${'./assets/img/check.png'}" alt="Done task"/>
-                                    </button>
-                                    <p>${day.toLocaleDateString('pt-PT')}</p>
-                                <div>
+        inProgressList.innerHTML += `<li style="background: var(--bg-body); word-wrap: wrap;">
+                                    <div class="task-header" style="display:flex; justify-content: space-between;">
+                                        <span style="color:gray; font-size:0.8rem;">${day.toLocaleDateString('pt-PT')}</span>
+                                        <span style="font-weight: 700;font-size: 0.8rem;border-radius:1rem; background-color:${colorsBackground[task.priority]}; padding: 0.2rem 1rem; color:${colors[task.priority]}">${task.priority} Level</span>
+                                    </div>
+                                    
+                                    <div style="margin-top: 1.2rem; position: relative;">
+                                        <p>${task.task_name}</p>
+                                        <button style="background:transparent; outline:none; border: 0; cursor: pointer; position: absolute; right: 0;"><img style="width: 1rem; height: 1rem;" src="./assets/img/angle-right.png"></button>
+                                    <div>
                                 </li>`
-
-        
-    });
+    }); 
 
     doneTasks.forEach(task => {
         doneList.innerHTML += `<li style="background:${colors[task.priority]}; word-wrap: wrap;">

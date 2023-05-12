@@ -1,23 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    font-family: 'Bebas Neue', cursive;
+}
+
+:root {
+    --bg-header: rgba(23,27,32,255);
+    --bg-body: #0c1117;
+    --color-background-task-container: #272a35;
 }
 
 body {
-    background: rgb(0,0,0);
+    background: var(--bg-body);
 }
 
-header {
-    border-top: 0.1rem solid gray;
-    border-bottom: 0.1rem solid gray;
+.navbar {
+    background: var(--bg-header);
 }
 
 header h2{
+    font-family: 'Titillium Web', sans-serif;
     color: white;
     text-align: center;
     margin-top: 0.1rem;
@@ -30,8 +36,8 @@ header h2{
     justify-content: space-around;
     align-items: center;
     gap: 1rem;
-    margin-top: 4rem;
-    background-color: white;
+    margin-top: 1rem;
+    border: 0.12rem solid #272a35;
 
     width: 25rem;
     height: 4rem;
@@ -40,15 +46,22 @@ header h2{
 }
 
 #input-task {
+    font-family: 'Ubuntu Mono', monospace;
     background-color: transparent;
     border-width: 0 0 0.1rem 0;
     outline: none;
     padding: 0.3rem;
-    color: black;
+    color: white;
     font-size: 1rem;
+    margin-left: 1rem;
+}
+
+#input-task::placeholder {
+    color: #272a35;
 }
 
 #btn-add-task {
+    font-family: 'Ubuntu Mono', monospace;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -60,7 +73,7 @@ header h2{
     color: white;
     font-size: 1rem;
     box-shadow: 1.2px 1.2px RGBA(0,0,0,0.45);
-    
+    margin-right: 1rem;
     cursor: pointer;
 }
 
@@ -68,14 +81,19 @@ header h2{
     width: 1rem;
     height: 1rem;
     border: 0;
+    
 }
 
 #select-item {
+    font-family: 'Ubuntu Mono', monospace;
     font-size: 1rem;
     border-radius: 0.5rem;
     border: 0;
     outline: none;
+    color: white;
     box-shadow: 1.2px 1.2px RGBA(0,0,0,0.45);
+    background: var(--bg-body);
+    cursor: pointer;
 }
 
 .tasks-container {
@@ -84,75 +102,75 @@ header h2{
     align-items: center;
     justify-content: space-around;
     color: white;
-    margin-top: 2rem;
 }
 
-.in-progress-container, .done-container  {
-    border-radius: 0.9rem;
-    width: 35rem;
+.in-progress-container, .done-container, .to-do-container {
+    font-family: 'Ubuntu Mono', monospace;
+    border-radius: 0.5rem;
+    width: 25rem;
     margin-top: 2rem;
     height: 24rem;
     overflow-y: auto;
+    border: 0.12rem solid #272a35;
 }
 
-.title-in-progress-tasks {
+.in-progress-container  header,
+.done-container  header, 
+.to-do-container  header {
+    height: 3rem;
+    background: var(--bg-body);
+    border-bottom: 0.1rem solid var(--bg-header);
     display: flex;
-    justify-content: center;
+    align-items: center;
 }
 
-.title-done-tasks {
-    display: flex;
-    justify-content: center;
+.in-progress-container  header h5,
+.done-container  header h5, 
+.to-do-container  header h5 {
+
+    margin-left: 1rem;
 }
 
-.title-in-progress-tasks  span {
-    margin: 1.2rem 0;
-    background: white;  
-    border-radius: 1rem;
-    padding: 0.5rem 1.2rem;
-    font-size: 1.2rem;
-    color: black;
-    font-weight: 700;
-    letter-spacing: 0.05rem;
+.in-progress-container  main,
+.done-container  main, 
+.to-do-container  main {
+    background: var(--bg-header);
+    min-height: 100%;
 }
 
-.title-done-tasks span {
-    margin: 1.2rem 0;
-    background: white;
-
-    border-radius: 1rem;
-    padding: 0.5rem 1.2rem;
-    color: black;
-    font-size: 1.2rem;
-    font-weight: 700;
-    letter-spacing: 0.05rem;
+ul {
+    padding-top: 1rem;
+    padding-bottom: 0.9rem;
 }
 
 ul > li {
-    display: flex;
-    justify-content: space-between;
     list-style-type: none;
-    background: red;
-    padding: 1rem;
-    border-radius: 1rem;
+    border: 0.05rem solid #272a35;
+    padding: 1.8rem 1rem;
+    border-radius: 0.5rem;
     margin: 0 1rem 1rem 1rem;
+
     word-break: break-all;
 }
 
+li header {
+    height: 1rem;
+}
+
 ::-webkit-scrollbar {
-    width: 0.5rem;
+    width: 0.2rem;
     height: 1rem;
     margin-right: 1rem;
 }
   
 ::-webkit-scrollbar-track {
-    background-color: #f1f1f1;
-    border-radius: 0.5rem;
+    background-color: transparent;
+    border-radius: 0.7rem;
 }
   
 ::-webkit-scrollbar-thumb {
     background-color: #888;
-    border-radius: 5px;
+    border-radius: 1rem;
 }
   
 ::-webkit-scrollbar-thumb:hover {

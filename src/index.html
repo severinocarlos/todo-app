@@ -8,14 +8,14 @@
     <title>To-do App</title>
 </head>
 <body>
-    <header>
-        <h2>To-do App</h1>
+    <header class="navbar">
+        <h2>To-do</h1>
     </header> <!--Navbar-->
 
     <main>
         <div class="container">
             <div class="add-tasks--container">
-                <input id="input-task" type="text" placeholder="Digite uma atividade">
+                <input id="input-task" type="text" placeholder="Add a task">
                 <label for="select-item">Priority: </label>
                 <select name="select-classification" id="select-item">
                     <option value="Low">Low</option>
@@ -27,21 +27,36 @@
             
             <div class="tasks-container">
 
-                <div class="in-progress-container">
-                    <div class="title-in-progress-tasks">
-                        <span>In progress</span>
-                    </div>
-                    <ul class="in-progress-tasks-list">
-                    </ul>
+                <div class="to-do-container">
+                    <header>
+                        <h5>To-do</h5>
+                    </header>
+                    <main>
+                        <ul class="to-do-tasks-list">
+                            <li>tamo ein</li>
+                        </ul>
+                    </main>
                 </div>
 
+                <div class="in-progress-container">
+                    <header>
+                        <h5>In-progress</h5>
+                    </header>
+                    <main>
+                
+                        <ul class="in-progress-tasks-list">
+                        </ul>
+                
+                    </main>
+                </div>
+
+
                 <div class="done-container">
-                    <div class="title-done-tasks">
-                        <span>Done</span>
-                    </div>
-                    
-                    <ul class="done-tasks-list">
-                    </ul>
+                    <header><h5>Done</h5></header>
+                    <main>
+                        <ul class="done-tasks-list">
+                        </ul>
+                    </main>
                 </div>
             </div>
         </div>
