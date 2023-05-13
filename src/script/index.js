@@ -53,11 +53,20 @@ const generateCards = (taskList, documentList) => {
     
 }
 
+
 const showCards = () =>  {
     const toDoList = document.querySelector('.to-do-tasks-list')
     const inProgressList = document.querySelector('.in-progress-tasks-list')
     const doneList = document.querySelector('.done-tasks-list')
     let { toDoTasks, inProgressTasks, doneTasks } = getItems()
+
+    const taskCounterToDo = document.querySelector('.tasks-counter-to-do')
+    const taskCounterInProgress = document.querySelector('.tasks-counter-in-progress')
+    const taskCounterDone = document.querySelector('.tasks-counter-done')
+
+    taskCounterToDo.innerHTML = `${toDoTasks.length}`
+    taskCounterInProgress.innerHTML = `${inProgressTasks.length}`
+    taskCounterDone.innerHTML = `${doneTasks.length}`
 
     toDoList.innerHTML = ''
     inProgressList.innerHTML = ''
@@ -135,8 +144,6 @@ const  removeCard = (_name, status) => {
 const moveCard = (_name, _status) => {
     let { toDoTasks, inProgressTasks, doneTasks} = getItems()
    
-    
-
     if (_status === 'to-do') {
         let index = getCard(toDoTasks, _name)
         let titleCard = toDoTasks[index].task_name
