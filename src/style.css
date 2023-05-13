@@ -67,20 +67,19 @@ header h2{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: white;
-    width: 2rem;
-    height: 2rem;
+    padding: 0.5rem;
+    background: transparent;
     border-radius: 0.5rem;
-    border: 0;
-    color: white;
+    border: 0.12rem solid var(--color-background-border);
     font-size: 1rem;
     margin-right: 1rem;
+
     cursor: pointer;
 }
 
 #btn-add-task img {
-    width: 1rem;
-    height: 1rem;
+    width: 0.8rem;
+    height: 0.8rem;
     border: 0;
     
 }
