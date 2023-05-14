@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
 
 * {
     margin: 0;
@@ -20,12 +19,12 @@ body {
 }
 
 .navbar {
+    width: 100%;
     background: var(--color-background-header);
 }
 
 header h2{
     font-family: 'Titillium Web', sans-serif;
-
     color: white;
     text-align: center;
     margin-top: 0.1rem;
@@ -107,6 +106,7 @@ header h2{
     margin-top: 2rem;
     height: 24rem;
     overflow-y: auto;
+    margin-bottom: 1rem;
     border: 0.12rem solid var(--color-background-border);
 }
 
@@ -134,12 +134,11 @@ header h2{
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     margin-right: 1rem;
     border-radius: 100%;
     width: 1.5rem;
     height: 1.5rem;
-
     background: var(--color-background-border);
    
 }
@@ -172,7 +171,7 @@ li header {
 
 ::-webkit-scrollbar {
     width: 0.2rem;
-    height: 1rem;
+    height: 0.5rem;
     margin-right: 1rem;
 }
   

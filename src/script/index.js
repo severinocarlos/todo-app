@@ -36,7 +36,7 @@ const generateCards = (taskList, documentList) => {
         documentList.innerHTML += `<li style="background: var(--bg-body); word-wrap: wrap;">
             <div class="task-header" style="display:flex; justify-content: space-between;">
                 <span style="color:gray; font-size:0.8rem;">${day.toLocaleDateString('pt-PT')}</span>
-                <span style="font-weight: 700;font-size: 0.8rem;border-radius:1rem; background-color:${colorsBackground[task.priority]}; padding: 0.2rem 1rem; color:${colors[task.priority]}">${task.priority} Level</span>
+                <span style="font-weight: 700;font-size: 0.7rem;border-radius:1rem; background-color:${colorsBackground[task.priority]}; padding: 0.2rem 1rem; color:${colors[task.priority]}">${task.priority} Level</span>
             </div>
             
             <div style="margin-top: 1.2rem; position: relative;">
