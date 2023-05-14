@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
 
 * {
@@ -25,6 +25,7 @@ body {
 
 header h2{
     font-family: 'Titillium Web', sans-serif;
+
     color: white;
     text-align: center;
     margin-top: 0.1rem;
@@ -36,10 +37,8 @@ header h2{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    gap: 1rem;
     margin-top: 1rem;
     border: 0.12rem solid var(--color-background-border);
-
     width: 25rem;
     height: 4rem;
     border-radius: 1rem;
@@ -47,15 +46,14 @@ header h2{
 }
 
 #input-task {
-    /* font-family: 'Ubuntu Mono', monospace; */
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: transparent;
     border-width: 0 0 0.1rem 0;
     outline: none;
     padding: 0.3rem;
     color: white;
-    font-size: 1rem;
-    margin-left: 1rem;
+    font-size: 0.8rem;
+    margin-left: 1.2rem;
 }
 
 #input-task::placeholder {
@@ -63,7 +61,6 @@ header h2{
 }
 
 #btn-add-task {
-    font-family: 'Ubuntu Mono', monospace;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -72,8 +69,7 @@ header h2{
     border-radius: 0.5rem;
     border: 0.12rem solid var(--color-background-border);
     font-size: 1rem;
-    margin-right: 1rem;
-
+    margin: 0 1rem;
     cursor: pointer;
 }
 
@@ -81,13 +77,11 @@ header h2{
     width: 0.8rem;
     height: 0.8rem;
     border: 0;
-    
 }
 
 #select-item {
-    /* font-family: 'Ubuntu Mono', monospace; */
-    font-family: 'Roboto Condensed', sans-serif;
-    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem;
     border-radius: 0.5rem;
     border: 0;
     outline: none;
@@ -106,7 +100,8 @@ header h2{
 }
 
 .in-progress-container, .done-container, .to-do-container {
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem;
     border-radius: 0.5rem;
     width: 25rem;
     margin-top: 2rem;

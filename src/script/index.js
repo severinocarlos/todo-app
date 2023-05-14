@@ -85,11 +85,8 @@ const showCards = () =>  {
         
         <div style="margin-top: 1.2rem; position: relative;">
             <p>${task.task_name}</p>
-            <button 
-            onclick="moveCard('${task.task_name}','${task.status}')"
-            style="background:transparent; outline:none; border: 0; cursor: pointer; position: absolute; right: 0;"><img style="width: 1rem; height: 1rem;" src="./assets/img/angle-right.png"></button>
             <button onclick="removeCard('${task.task_name}','${task.status}')"
-            style="padding-bottom: 0.3rem; background:transparent; outline:none; border: 0; cursor: pointer; position: absolute; right: 0; margin-right: 1.5rem;">
+            style="padding-bottom: 0.3rem; background:transparent; outline:none; border: 0; cursor: pointer; position: absolute; right: 0;">
             <img style="width: 1rem; height: 1rem;" src="./assets/img/delete.png"/></button>
         <div>
     </li>`
